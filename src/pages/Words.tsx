@@ -115,7 +115,7 @@ export default function Words() {
               <div key={index} className="word-input-row">
                 <span className="word-number">{index + 1}</span>
                 <input
-                  ref={el => inputRefs.current[index] = el}
+                  ref={el => { inputRefs.current[index] = el }}
                   type="text"
                   value={word}
                   onChange={(e) => handleWordChange(index, e.target.value)}
